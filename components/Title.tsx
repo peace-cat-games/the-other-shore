@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { page } from "@/lib/paths";
 import { useRef, useState } from "react";
 
 import { STORY } from "@/content";
@@ -90,12 +90,12 @@ export function Title({ api }: { api: GameApi }) {
               e.target.value = "";
             }}
           />
-          <Link href="/history" className="underline">
+          <a href={page("/history")} className="underline">
             The history behind the game
-          </Link>
-          <Link href="/credits" className="underline">
+          </a>
+          <a href={page("/credits")} className="underline">
             Credits
-          </Link>
+          </a>
         </div>
         {api.notice ? (
           <p role="alert" className="card border-[var(--color-amber)] p-3">

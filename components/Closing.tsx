@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { page } from "@/lib/paths";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { STORY } from "@/content";
@@ -79,9 +79,9 @@ export function Closing({ api }: { api: GameApi }) {
           </div>
           <p className="muted text-sm">
             Sources and the line between history and fiction are on{" "}
-            <Link href="/history" className="underline">
+            <a href={page("/history")} className="underline">
               the history page
-            </Link>
+            </a>
             .
           </p>
         </section>
