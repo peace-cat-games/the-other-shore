@@ -102,8 +102,8 @@ export const SCENES_3: Scene[] = [
       else if (r.has("s:sara-found") && local(r) && !r.has("s:sara-monday"))
         levins =
           r.has("s:soup") || r.has("s:levins-elsa")
-            ? " The Levins kept the fast all Saturday, the Day of Atonement, and when it ended at nightfall Mrs Nyström's soup was eaten to the last drop and declared the best in Sweden. Mrs Nyström has been insufferable since."
-            : " The Levins kept the fast all Saturday, the Day of Atonement, and broke it at nightfall with bread and herring from the Lotta kitchen, over which Sara said a blessing.";
+            ? " The Levins kept the fast of Yom Kippur all Saturday, and when it ended at nightfall Mrs Nyström's soup was eaten to the last drop and declared the best in Sweden. Mrs Nyström has been insufferable since."
+            : " The Levins kept the fast of Yom Kippur all Saturday, and broke it at nightfall with bread and herring from the Lotta kitchen, over which Sara said a blessing.";
       out.push(beds + levins);
       out.push(`The volunteers are ${weary(r.v("tired"))}. Nils has not seen you awake since ${r.has("s:raa-post") ? "Thursday" : "Wednesday"}. This morning there was a crossword clue on the kitchen table in his handwriting: 'Seen less often than the sun (5).' The answer is MÄRTA.`);
       return out;
@@ -356,12 +356,12 @@ function arrivals(r: Read): PersonOutcome[] {
       ? "At a summer hotel inland, empty for the season and full of Danes, from the Thursday after they landed. She kept its accounts for the refugee committee."
       : "Went inland with her family on the Monday bus, to a summer hotel empty for the season and full of Danes, and kept its accounts for the refugee committee.";
   const sara = r.has("s:at-raa")
-    ? `Landed at Råå at first light and was met with a kitchen chair. ${r.has("s:sara-waited") ? "She kept the Day of Atonement in Helsingborg among strangers who did their best, and went inland to her family on Monday." : "She was with her family the same day, in time for the Day of Atonement."}`
+    ? `Landed at Råå at first light and was met with a kitchen chair. ${r.has("s:sara-waited") ? "She kept Yom Kippur in Helsingborg among strangers who did their best, and went inland to her family on Monday." : "She was with her family the same day, in time for Yom Kippur."}`
     : r.has("s:sara-ruth")
       ? "Sat at Ramlösa under W from Friday to Saturday, and was found by her granddaughter, who reads noticeboards."
       : r.has("s:sara-tray")
         ? "Waited at Ramlösa under W until Tuesday, when Hanna's letter and Märta's tray met at last. She went inland to her family the next day and told everyone at the hotel how the Swedes spell."
-        : "Lewin, Sara, 77, on the list from Råå, was Sara Levin. She was with her family the same day, in time for the Day of Atonement.";
+        : "Lewin, Sara, 77, on the list from Råå, was Sara Levin. She was with her family the same day, in time for Yom Kippur.";
   const out: PersonOutcome[] = [
     { person: "hanna", kind: "accommodation", text: hotel },
     { person: "david", kind: "safety", text: r.has("s:school") ? "Taught the kings of Denmark in a corner of Märta's gymnasium, and then to Danish children inland, all winter." : "Taught Danish children inland all winter, mostly the kings of Denmark, in order." },

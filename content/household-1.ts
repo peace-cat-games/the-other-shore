@@ -45,9 +45,9 @@ export const SCENES_1: Scene[] = [
     place: "flat",
     title: "An ordinary Tuesday",
     body: () => [
-      "The blackout curtains are drawn before supper, as they have been for three years. Under the lamp the table holds a honey cake cooling for the New Year, Ruth's Danish exercise book, and a column of figures from the printing works that will not add up.",
+      "The blackout curtains are drawn before supper, as they have been for three years. Under the lamp the table holds a honey cake cooling for Rosh Hashanah, the Jewish New Year, Ruth's Danish exercise book, and a column of figures from the printing works that will not add up.",
       "David reads the evening paper and says nothing about it, which is how you know it is bad. Since the end of August, when the government stopped working with the Germans, there have been soldiers at the bridges and rumors in every queue. Benny is building a harbor out of spoons.",
-      "Tomorrow evening the New Year begins. Grandmother Sara will expect everyone at her table in Frederiksberg, the good tablecloth, and an argument about the fish.",
+      "Tomorrow evening Rosh Hashanah begins. Grandmother Sara will expect everyone at her table in Frederiksberg, the good tablecloth, and an argument about the fish.",
     ],
     options: [
       {
@@ -70,7 +70,7 @@ export const SCENES_1: Scene[] = [
         act: (c) => {
           c.set("h:letter");
           c.say("You write it in the plain Danish he likes to practice: come Thursday, there will be cake, Ruth wants to beat you at chess again. David adds a line in German at the bottom and you pretend not to see it.");
-          c.log("Wrote to Peter inviting him for the New Year.");
+          c.log("Wrote to Peter inviting him for Rosh Hashanah.");
           c.pass(30);
           wednesday(c);
         },
@@ -107,8 +107,8 @@ export const SCENES_1: Scene[] = [
     place: "flat",
     title: "What the rabbi said",
     body: (r) => [
-      "On Wednesday, the eve of the New Year, David comes home from the synagogue far too early, still in his good coat, and closes the door behind him with both hands.",
-      "There was no service, he says. The rabbi stood up and told everyone to go home: the Germans mean to arrest the Jews of Denmark in their homes on Friday night, as the New Year ends and the Sabbath begins. Do not be at home. Hide. Get away. Tell everyone you know, and tell those who were not there.",
+      "On Wednesday, the eve of Rosh Hashanah, David comes home from the synagogue far too early, still in his good coat, and closes the door behind him with both hands.",
+      "There was no service, he says. The rabbi stood up and told everyone to go home: the Germans mean to arrest the Jews of Denmark in their homes on Friday night, as Rosh Hashanah ends and the Sabbath begins. Do not be at home. Hide. Get away. Tell everyone you know, and tell those who were not there.",
       `'He didn't say where to go,' David says. 'Nobody knows where to go.' Ruth is standing in the doorway of the kitchen with ${r.has("h:essay") ? "her lighthouse essay" : "her school satchel"}, listening.`,
     ],
     options: [
@@ -157,7 +157,7 @@ export const SCENES_1: Scene[] = [
     title: "Grandmother Sara",
     body: () => [
       "Sara has the good tablecloth on already, and the candlesticks polished, and her coat over a chair because she was at the synagogue too and has heard every word.",
-      "'I am seventy-seven,' she says. 'I have been an old Jewish woman in Copenhagen since before your Benny's grandfather could tie his shoes. Nobody came for me in 1914 or in 1940. And it is the New Year.' Then, more quietly: 'Mrs Holst at the parsonage has asked me to stay with her. She was very firm. Pastors' widows are always very firm.'",
+      "'I am seventy-seven,' she says. 'I have been an old Jewish woman in Copenhagen since before your Benny's grandfather could tie his shoes. Nobody came for me in 1914 or in 1940. And it is Rosh Hashanah.' Then, more quietly: 'Mrs Holst at the parsonage has asked me to stay with her. She was very firm. Pastors' widows are always very firm.'",
       "She looks at you over her glasses, waiting to see whether you will be firm too.",
     ],
     options: [
@@ -213,7 +213,7 @@ export const SCENES_1: Scene[] = [
     place: "flat",
     title: "A day of errands",
     body: (r) => {
-      const left = r.time < at("1943-09-29", 21) ? "It is still Wednesday, and tonight the New Year begins." : "It is Thursday, the first day of the New Year, and the streets are ordinary in a way that feels like a trick.";
+      const left = r.time < at("1943-09-29", 21) ? "It is still Wednesday, and tonight Rosh Hashanah begins." : "It is Thursday, the first day of Rosh Hashanah, and the streets are ordinary in a way that feels like a trick.";
       return [
         `${left} There is more to do than there are hours, and every errand has to look like something else: a visit, a walk, a trip to the bank.`,
         r.has("h:plan") ? "Ruth's list lies on the table, with ticks beside some names in her careful hand." : "You keep a list in your head and keep losing it.",
@@ -349,7 +349,7 @@ export const SCENES_1: Scene[] = [
     place: "flat",
     title: "What fits in a bag",
     body: (r) => [
-      "Thursday evening, the second night of the New Year. You light the candles because it would be worse not to, and say the blessing, and then you open the suitcases on the bed.",
+      "Thursday evening, the second night of Rosh Hashanah. You light the candles because it would be worse not to, and say the blessing, and then you open the suitcases on the bed.",
       `Everything in the flat is suddenly either necessary or impossible. ${r.v("luggage") === 0 ? "The bags are empty." : `You have packed ${r.v("luggage") === 1 ? "one bag" : `${r.v("luggage")} bags`} so far.`} Ole said: whatever you take, you must be able to carry it at a run, at night, down a beach.`,
     ],
     options: [
@@ -414,7 +414,7 @@ export const SCENES_1: Scene[] = [
     place: "flat",
     title: "Leaving home",
     body: (r) => [
-      "Friday morning, the second day of the New Year. By tonight nobody should be sleeping here.",
+      "Friday morning, the second day of Rosh Hashanah. By tonight nobody should be sleeping here.",
       `You go through the rooms once. The geraniums, the piano nobody plays, Ruth's lighthouse drawings pinned above her bed. ${r.has("h:keys") ? "Mrs Bech has the spare key." : "You lock the door and keep the key, though you do not know what it will open when you come back."}`,
       "There are only so many places a family of this size can go without being noticed.",
     ],

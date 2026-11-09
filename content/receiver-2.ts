@@ -82,15 +82,15 @@ function together(c: Ctx): void {
     c.set("s:sara-here");
     if (fromCamp) c.say(`${c.has("s:ruth-heard") ? "" : "You go and find the Levins yourself, to tell them. "}A Lotta brings Sara up from Ramlösa in the camp lorry, sitting in front, with her stick across her knees.`);
     c.move("sara", base(c), "safe");
-    c.say("Benny gets to her first. Ruth gets there second and says, 'They spelled you wrong, Grandmother,' and Sara says the Swedes may spell her however they like, since they have been so kind. David stands with his hand over his mouth and says nothing at all. It is Friday, and at sundown the Day of Atonement begins; Sara has not crossed the Sound, she tells you, to spend it among people who cannot spell her name.");
+    c.say("Benny gets to her first. Ruth gets there second and says, 'They spelled you wrong, Grandmother,' and Sara says the Swedes may spell her however they like, since they have been so kind. David stands with his hand over his mouth and says nothing at all. It is Friday, and at sundown Yom Kippur, the Day of Atonement, begins; Sara has not crossed the Sound, she tells you, to spend it among people who cannot spell her name.");
     c.learn("sara", "saw");
   } else if (c.has("s:levins-elsa")) {
     c.move("sara", "nystrom", "safe");
-    c.say("You walk her to Mrs Nyström's yourself. Mrs Nyström and Sara Levin meet in the hallway, among the umbrellas, and are in disagreement about fish within a quarter of an hour. Then Sara explains that at sundown the Day of Atonement begins, and that she will be eating nothing at all until Saturday night, and Mrs Nyström, who has never been told anything of the kind in her own hallway, goes away to think about soup for Saturday night.");
+    c.say("You walk her to Mrs Nyström's yourself. Mrs Nyström and Sara Levin meet in the hallway, among the umbrellas, and are in disagreement about fish within a quarter of an hour. Then Sara explains that at sundown Yom Kippur, the Day of Atonement, begins, and that she will be eating nothing at all until Saturday night, and Mrs Nyström, who has never been told anything of the kind in her own hallway, goes away to think about soup for Saturday night.");
     c.learn("sara", "saw");
   } else {
     c.move("sara", "inland", "safe");
-    c.say("She goes inland on the noon bus with a Lotta and a letter. At six Hanna Levin telephones from the hotel to say that Sara has arrived, that she has complained about the bus, and that they are lighting the candles: at sundown the Day of Atonement begins.");
+    c.say("She goes inland on the noon bus with a Lotta and a letter. At six Hanna Levin telephones from the hotel to say that Sara has arrived, that she has complained about the bus, and that they are lighting the candles: at sundown Yom Kippur, the Day of Atonement, begins.");
     c.learn("sara", "telephone");
   }
   c.log("Sara Levin is with her family.");
@@ -604,7 +604,7 @@ export const SCENES_2: Scene[] = [
             c.set("s:sara-monday");
             c.set("s:sara-waited");
             c.learn("sara", "saw");
-            c.say("Hanna Levin, on the telephone, is silent for so long that you think the line has gone. Then she thanks you, and asks you to tell Sara that they will light the candles at the same time, there and in Helsingborg, because at sundown the Day of Atonement begins. You find two candles, and a Lotta finds a third, and at sundown Sara lights them on a borrowed table in a borrowed shawl, and does not need anyone to tell her the words.");
+            c.say("Hanna Levin, on the telephone, is silent for so long that you think the line has gone. Then she thanks you, and asks you to tell Sara that they will light the candles at the same time, there and in Helsingborg, because at sundown Yom Kippur, the Day of Atonement, begins. You find two candles, and a Lotta finds a third, and at sundown Sara lights them on a borrowed table in a borrowed shawl, and does not need anyone to tell her the words.");
             c.log("Sara Levin is resting in Helsingborg. She goes inland to her family on Monday.");
           }
           weekend(c);

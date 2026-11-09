@@ -34,7 +34,7 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
     {
       title: "The warning",
       paragraphs: [
-        "On 28 September Best told Georg F. Duckwitz, the shipping expert at the German legation, the date of the action. Duckwitz passed it to Danish Social Democrats, among them Hans Hedtoft, who carried it to the leaders of the Jewish community. On 29 September, the eve of Rosh Hashanah, Rabbi Marcus Melchior warned his congregation and urged them to hide.",
+        "On 28 September Best told Georg F. Duckwitz, the shipping expert at the German legation, the date of the action. Duckwitz passed it to Danish Social Democrats, among them Hans Hedtoft, who carried it to the leaders of the Jewish community. On 29 September, the eve of Rosh Hashanah, the Jewish New Year, Rabbi Marcus Melchior warned his congregation and urged them to hide.",
         "Rumor had already begun to spread, and the warning spread 'like wildfire'. Most families left home within days, to friends, neighbors, colleagues, strangers, summer houses, churches and hospitals. Several Copenhagen hospitals, Bispebjerg among them, hid people under false names and moved them out in ambulances.",
         "German officials did not act alike. Historians argue that Best ran a double game, and that Duckwitz's leak served it. The German navy kept its boats on naval work, and German police did not patrol the Øresund for refugees. But a small group of Gestapo men did hunt the fleeing Jews, with the help of Danish informers, and one Gestapo chief in Helsingør, Hans Juhl, made about half of all the arrests.",
       ],
@@ -43,7 +43,7 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
     {
       title: "The night of 1 October",
       paragraphs: [
-        "The action began at about nine o'clock on Friday evening, 1 October, when the Germans expected Jews to be at home for the New Year. Police were ordered not to break down doors. Most homes were empty. German records count 232 people arrested that night; another count gives 202 in Copenhagen.",
+        "The action began at about nine o'clock on Friday evening, 1 October, when the Germans expected Jews to be at home for Rosh Hashanah. Police were ordered not to break down doors. Most homes were empty. German records count 232 people arrested that night; another count gives 202 in Copenhagen.",
       ],
       sources: ["ruhl", "bak-2009", "bak-flugten"],
     },
