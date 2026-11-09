@@ -2,7 +2,9 @@
 
 /**
  * The game in the browser. The engine is pure and runs here; every choice
- * is autosaved for its campaign, and leaving is never penalised. Retrying a
+ * is autosaved for its campaign until the campaign ends; a finished campaign's
+ * autosave is cleared, so the title offers only a fresh start. Leaving is
+ * never penalised. Retrying a
  * chapter replays the same campaign up to the chapter's start.
  */
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -12,7 +14,7 @@ import type { Mode, RoleId, State } from "@/engine/types";
 import { ROLE_IDS } from "@/engine/types";
 import { STORY } from "@/content";
 import { loadText as parseAndReplay, makeSave, serialize } from "@/persistence/save";
-import { browserStore, clearAuto, DEFAULT_SETTINGS, readAuto, readSettings, writeAuto, writeSettings, type Settings } from "@/persistence/storage";
+import { browserStore, clearAuto, DEFAULT_SETTINGS, readAuto, readSettings, saveProgress, writeSettings, type Settings } from "@/persistence/storage";
 
 export type Screen = "title" | "play" | "closing";
 
@@ -34,7 +36,11 @@ export function useGame() {
     const out: Partial<Record<RoleId, string>> = {};
     for (const r of ROLE_IDS) {
       const raw = readAuto(store, r);
-      if (raw) out[r] = raw;
+      if (!raw) continue;
+      // An autosave of a finished campaign (from before finished ones were cleared) is not offered.
+      const replayed = parseAndReplay(STORY, raw);
+      if (!("error" in replayed) && replayed.state.ending) clearAuto(store, r);
+      else out[r] = raw;
     }
     setAutos(out);
   }, [store]);
@@ -57,7 +63,7 @@ export function useGame() {
   const autosave = useCallback(
     (s: State) => {
       if (!store) return setSaved("unavailable");
-      setSaved(writeAuto(store, s, labelOf(s), new Date().toISOString()) ? "saved" : "failed");
+      setSaved(saveProgress(store, s, labelOf(s), new Date().toISOString()) ? "saved" : "failed");
       refreshAutos();
     },
     [store, refreshAutos],

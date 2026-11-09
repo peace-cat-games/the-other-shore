@@ -34,7 +34,7 @@ export const VERSES = [
 ];
 
 export const ENCOURAGEMENT: string[] = [
-  "If this story has meant something to you, look for the stranger near you. Help the poor. Visit the sick, and do not forget those who struggle with addiction or mental illness, who are so often left alone. Welcome people who are far from home.",
+  "If this story has meant something to you, look for the stranger near you. Help the poor, especially the homeless. Visit the sick, and do not forget those who struggle with addiction or mental illness, who are so often left alone. Welcome people who are far from home.",
   "Do not follow a crowd to do evil. Overcome evil with good.",
 ];
 
