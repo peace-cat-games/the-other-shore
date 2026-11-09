@@ -23,7 +23,7 @@ export const EPILOGUE = {
 
 export const AUTHOR_NOTE: string[] = [
   "My connection with these countries is still growing. I have visited Finland; my experience of Denmark has so far been limited to Copenhagen airport, and of Sweden to Arlanda airport and Haparanda. There is much I have yet to see. Through what I have experienced and what I have learned about them, I have developed a deep love and admiration for Denmark, Finland, Sweden, and their people.",
-  "I thank God for those who sheltered their neighbors in a time of persecution: the people of Denmark who helped Jews escape, and the people of Sweden who welcomed them. I also honor Finland's protection of its Jewish citizens, a story we intend to explore in another game.",
+  "I thank God for those who sheltered their neighbors in a time of persecution: the people of Denmark who helped Jews escape, and the people of Sweden who welcomed them. I also honor Finland, which I have visited and really love, for protecting its Jewish citizens, a story we intend to explore in another game.",
   "In these acts of courage and hospitality, I see people living up to the Christian calling represented by the crosses on their flags: to welcome the stranger, protect the vulnerable, and overcome evil with good.",
   "This game is offered freely, with gratitude.",
 ];

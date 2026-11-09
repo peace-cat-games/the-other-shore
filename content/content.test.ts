@@ -116,7 +116,7 @@ test("the author's note keeps the exact travel facts and the baseline wording", 
   for (const line of [
     "I have visited Finland; my experience of Denmark has so far been limited to Copenhagen airport, and of Sweden to Arlanda airport and Haparanda.",
     "There is much I have yet to see.",
-    "a story we intend to explore in another game",
+    "I also honor Finland, which I have visited and really love, for protecting its Jewish citizens, a story we intend to explore in another game.",
     "This game is offered freely, with gratitude.",
   ])
     assert.ok(note.includes(line), `missing: ${line}`);
