@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/*
+ * The Other Shore. Peace Cat Games.
+ * A northern coast in October: sea-slate and fog, sand-coloured paper for
+ * the story, a lighthouse amber used sparingly for what matters now.
+ * Calm rather than dark: this is a story of people who helped. Text pairings
+ * meet WCAG AA in both the light and the dark scheme.
+ */
+@theme {
+  --color-fog: #eef1f0;
+  --color-fog-2: #e2e7e6;
+  --color-sand: #f7f3ea;
+  --color-sand-2: #ece5d6;
+  --color-sea: #1f3d4d;
+  --color-sea-2: #2e5568;
+  --color-sea-3: #5b7a88;
+  --color-ink: #1c2328;
+  --color-ink-2: #3c474e;
+  --color-ink-3: #56636b;
+  --color-rule: #c9d1d1;
+  --color-amber: #8a5a12;
+  --color-amber-light: #f6e7c8;
+  --color-moss: #3f5f3a;
+  --color-moss-light: #e1ebdc;
+  --color-focus: #1b6fa8;
+
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+  --font-serif: var(--font-literata), Georgia, serif;
+}
+
+:root {
+  color-scheme: light;
+  --bg: var(--color-fog);
+  --card: var(--color-sand);
+  --text: var(--color-ink);
+  --muted: var(--color-ink-3);
+  --line: var(--color-rule);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #111b21;
+    --card: #182630;
+    --text: #e8ece9;
+    --muted: #a9b6bc;
+    --line: #2f434f;
+  }
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 100%;
+}
+html[data-text="large"] {
+  font-size: 112.5%;
+}
+html[data-text="larger"] {
+  font-size: 125%;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.005em;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  :focus-visible {
+    outline-color: #7cc0ec;
+  }
+}
+
+@layer components {
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+.muted {
+  color: var(--muted);
+}
+.rule {
+  border-color: var(--line);
+}
+
+.story p {
+  margin: 0 0 0.9em;
+  line-height: 1.72;
+}
+.story p:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.4rem;
+  padding: 0.55rem 1rem;
+  text-align: left;
+  transition: background-color 150ms;
+}
+.btn-primary {
+  background: var(--color-sea);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-sea-2);
+}
+.btn-quiet {
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+.btn-quiet:hover {
+  background: color-mix(in srgb, var(--line) 35%, transparent);
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+}
+
+.fade-in {
+  animation: fade-in 280ms ease-out both;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+html[data-motion="reduce"] *,
+html[data-motion="reduce"] *::before,
+html[data-motion="reduce"] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
