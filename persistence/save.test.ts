@@ -5,7 +5,7 @@ import { STORY } from "../content/index.ts";
 import { walk } from "../content/walk.ts";
 import { ROLE_IDS } from "../engine/types.ts";
 import { loadText, makeSave, parseSave, serialize } from "./save.ts";
-import { readAuto, writeAuto, type KeyValueStore } from "./storage.ts";
+import { readAuto, saveProgress, writeAuto, type KeyValueStore } from "./storage.ts";
 
 function memory(): KeyValueStore & { data: Map<string, string> } {
   const data = new Map<string, string>();
@@ -47,4 +47,17 @@ test("the autosave survives a broken or missing store", () => {
   const broken: KeyValueStore = { getItem: () => "{garbage", setItem: () => { throw new Error("full"); }, removeItem: () => {} };
   assert.equal(readAuto(broken, "receiver"), null);
   assert.equal(writeAuto(broken, s, "x", "now"), false);
+});
+
+test("a finished campaign's autosave is cleared, so it can't be continued", () => {
+  const store = memory();
+  const done = walk(STORY, "household", "story", 9, "careful").state;
+  const mid = loadText(STORY, serialize({ ...makeSave(done, "", ""), choices: done.choices.slice(0, 5) }));
+  assert.ok(!("error" in mid));
+  if ("error" in mid) return;
+  assert.equal(saveProgress(store, mid.state, "Jewish household", "now"), true);
+  assert.ok(readAuto(store, "household"), "mid-campaign: kept for continuing");
+  assert.ok(done.ending);
+  assert.equal(saveProgress(store, done, "Jewish household", "now"), true);
+  assert.equal(readAuto(store, "household"), null, "ended: nothing to continue");
 });

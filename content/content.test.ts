@@ -114,6 +114,7 @@ test("the people in the closing account are the campaign's own", () => {
 test("the author's note keeps the exact travel facts and the baseline wording", () => {
   const note = AUTHOR_NOTE.join("\n");
   for (const line of [
+    "My connection with Nordic countries is still growing.",
     "I have visited Finland; my experience of Denmark has so far been limited to Copenhagen airport, and of Sweden to Arlanda airport and Haparanda.",
     "There is much I have yet to see.",
     "I also honor Finland, which I have visited and really love, for protecting its Jewish citizens, a story we intend to explore in another game.",

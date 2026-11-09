@@ -48,6 +48,18 @@ export function writeAuto(store: KeyValueStore | null, s: State, label: string, 
   }
 }
 
+/**
+ * After a choice: keep the campaign's autosave, or clear it once the
+ * campaign has ended, so a finished story is never offered to "continue".
+ */
+export function saveProgress(store: KeyValueStore | null, s: State, label: string, savedAt: string): boolean {
+  if (s.ending) {
+    clearAuto(store, s.role);
+    return Boolean(store);
+  }
+  return writeAuto(store, s, label, savedAt);
+}
+
 export function clearAuto(store: KeyValueStore | null, role: RoleId): void {
   try {
     store?.removeItem(key(role));
