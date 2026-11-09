@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { HonorRoll } from "@/components/HonorRoll";
 import { Page } from "@/components/kit";
 import { CREDITS } from "@/content/closing";
 
-export const metadata: Metadata = { title: "Credits" };
+export const metadata: Metadata = { title: "Credits", description: "Credits for The Other Shore, and every Danish and Swedish Righteous Among the Nations." };
 
 export default function Credits() {
   return (
@@ -14,8 +15,12 @@ export default function Credits() {
           Back to The Other Shore
         </Link>
       </p>
-      <h1 className="mt-4 text-3xl font-semibold sm:text-4xl">Credits</h1>
-      <ul className="mt-6 space-y-3">
+      <h1 className="mt-4 text-3xl font-semibold sm:text-4xl">In honor</h1>
+      <div className="mt-6">
+        <HonorRoll />
+      </div>
+      <h2 className="mt-10 text-2xl font-semibold">Credits</h2>
+      <ul className="mt-4 space-y-3">
         {CREDITS.map((c, i) => (
           <li key={i}>{c}</li>
         ))}

@@ -8,6 +8,7 @@ import { AUTHOR_NOTE, CREDITS, ENCOURAGEMENT, EPILOGUE, EXPLORE, VERSES } from "
 import { viewOf } from "@/engine/view";
 
 import { Button, Card, Eyebrow, Page } from "./kit";
+import { HonorRoll } from "./HonorRoll";
 import type { GameApi } from "./useGame";
 
 const KIND_WORDS = { safety: "Safe", reunion: "Reunited", accommodation: "In temporary accommodation", unresolved: "Whereabouts unresolved", ordinary: "Ordinary life continuing", held: "Held" } as const;
@@ -31,7 +32,7 @@ export function Closing({ api }: { api: GameApi }) {
   return (
     <Page>
       <Eyebrow>
-        {v.roleLabel} · {["Outcomes", "The history", "Thanksgiving", "Credits", "More stories"][step]}
+        {v.roleLabel} · {["Outcomes", "The history", "Thanksgiving", "In honor and credits", "More stories"][step]}
       </Eyebrow>
       {at === "outcomes" ? (
         <section className="mt-2 space-y-5">
@@ -117,8 +118,10 @@ export function Closing({ api }: { api: GameApi }) {
       {at === "credits" ? (
         <section className="mt-2 space-y-4">
           <h1 ref={heading} tabIndex={-1} className="text-3xl font-semibold outline-none">
-            Credits
+            In honor
           </h1>
+          <HonorRoll />
+          <h2 className="pt-6 text-2xl font-semibold">Credits</h2>
           <ul className="space-y-2">
             {CREDITS.map((c, i) => (
               <li key={i}>{c}</li>

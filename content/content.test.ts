@@ -5,6 +5,7 @@ import { apply, indexOf, optionsOf, reader, sceneOf, start } from "../engine/pla
 import { ROLE_IDS, type Mode, type RoleId, type State } from "../engine/types.ts";
 import { AUTHOR_NOTE, CREDITS, ENCOURAGEMENT, EPILOGUE, EXPLORE, VERSES } from "./closing.ts";
 import { HISTORY } from "./history.ts";
+import { RIGHTEOUS } from "./righteous.ts";
 import { STORY } from "./index.ts";
 import { walk, type Policy } from "./walk.ts";
 
@@ -145,4 +146,15 @@ test("the history, credits and invitation exist and link only to real Peace Cat 
 test("Jewish characters never voice the author's Christian interpretation", () => {
   const story = runs.flatMap((r) => r.texts).join("\n");
   assert.doesNotMatch(story, /crosses on (?:their|the) flags|Christian calling|convert/i);
+});
+
+test("the roll of honor names every Danish and Swedish Righteous Among the Nations, as Yad Vashem counts them", () => {
+  const count = (l: { people: number }[]) => l.reduce((n, r) => n + r.people, 0);
+  // Yad Vashem, "Names of Righteous by Country", as of 1 January 2024: Denmark 22 (15 files), Sweden 10 (9 files).
+  assert.equal(count(RIGHTEOUS.denmark), 22);
+  assert.equal(RIGHTEOUS.denmark.length, 15);
+  assert.equal(count(RIGHTEOUS.sweden), 10);
+  assert.equal(RIGHTEOUS.sweden.length, 9);
+  for (const r of [...RIGHTEOUS.denmark, ...RIGHTEOUS.sweden, ...RIGHTEOUS.others]) assert.ok(r.name && r.where, "every name says where");
+  assert.ok(RIGHTEOUS.sweden.some((r) => r.where.startsWith("Budapest")) && RIGHTEOUS.sweden.some((r) => r.where.startsWith("Berlin")));
 });

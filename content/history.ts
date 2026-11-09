@@ -99,6 +99,13 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
       sources: ["denmark-minority", "thaler", "sdu-kristensen", "lex-oksbol"],
     },
     {
+      title: "Righteous Among the Nations",
+      paragraphs: [
+        "Yad Vashem recognizes 22 Danes and 10 Swedes as Righteous Among the Nations (as of 1 January 2024); their names are on the credits page, with where each of them helped. Most of the Danes helped in October 1943. The Swedes helped in Budapest, Berlin, Rome and Genoa. At their own request the members of the Danish resistance were not recognized individually; Yad Vashem planted a tree in their honor, and a boat from Gilleleje stands in its museum. Georg F. Duckwitz is recognized as a German.",
+      ],
+      sources: ["yv-statistics", "yv-database"],
+    },
+    {
       title: "What is history and what is fiction",
       paragraphs: [
         "History: the dates, the warning, the night of 1 October, Snekkersten, Helsingør, Gilleleje, Helsingborg, Råå and Ramlösa, the Swedish forms, the prices' range, the Danish authorities' pressure on behalf of the deportees, Theresienstadt and the white buses.",
@@ -109,6 +116,8 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
     },
   ],
   sources: [
+    { id: "yv-statistics", title: "Names of Righteous by Country (as of 1 January 2024)", publisher: "Yad Vashem", url: "https://www.yadvashem.org/righteous/statistics.html" },
+    { id: "yv-database", title: "The Righteous Among the Nations Database", publisher: "Yad Vashem", url: "https://collections.yadvashem.org/en/righteous" },
     { id: "ushmm-denmark", title: "Denmark", publisher: "United States Holocaust Memorial Museum", url: "https://encyclopedia.ushmm.org/content/en/article/denmark" },
     { id: "ushmm-rescue", title: "Rescue in Denmark", publisher: "United States Holocaust Memorial Museum", url: "https://encyclopedia.ushmm.org/content/en/article/rescue-in-denmark" },
     { id: "ushmm-redcross", title: "Theresienstadt: Red Cross Visit", publisher: "United States Holocaust Memorial Museum", url: "https://encyclopedia.ushmm.org/content/en/article/theresienstadt-red-cross-visit" },
