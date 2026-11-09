@@ -41,7 +41,7 @@ export const ENCOURAGEMENT: string[] = [
 export const CREDITS: string[] = [
   "The Other Shore: October 1943. A game by Peace Cat Games.",
   "Story, design, historical research and browser implementation by Peace Cat Games.",
-  "The people of the story, the boat Ternen, and its houses, coves and reception rooms are fictional. The history comes from the sources listed on the history page, chief among them the United States Holocaust Memorial Museum, the Danish Jewish Museum and its Safe Haven archive of Swedish refugee records, folkedrab.dk of the Danish Institute for International Studies, the Helsingborg city encyclopedia, and Fenno Judaica of the Jewish Community of Helsinki.",
+  "The people of the story, the boat Ternen, and its houses, coves and reception rooms are fictional. The history comes from the sources listed on the history page, chief among them the United States Holocaust Memorial Museum, the Danish Jewish Museum and its Safe Haven archive of Swedish refugee records, folkedrab.dk of the Danish Institute for International Studies, and the Helsingborg city encyclopedia.",
   "Typefaces: Atkinson Hyperlegible, by the Braille Institute, and Literata, by TypeTogether, both under the SIL Open Font License.",
   "The sound of the sea is made in your browser; there are no recordings.",
   "The game's source code and story are released under the Christian Open Source License (COSL) 1.0.",

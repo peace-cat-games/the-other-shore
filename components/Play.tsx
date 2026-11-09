@@ -24,8 +24,10 @@ export function Play({ api }: { api: GameApi }) {
   const heading = useRef<HTMLHeadingElement>(null);
   const [panel, setPanel] = useState<"none" | "people" | "journal" | "menu">("none");
 
+  // Each new scene starts at the top, with the keyboard focus on its heading.
   useEffect(() => {
-    heading.current?.focus();
+    window.scrollTo({ top: 0 });
+    heading.current?.focus({ preventScroll: true });
   }, [s.step]);
 
   useEffect(() => {
@@ -46,7 +48,7 @@ export function Play({ api }: { api: GameApi }) {
       </header>
 
       <div className="mx-auto grid w-full max-w-5xl flex-1 gap-6 px-4 py-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
-        <main id="main" className="min-w-0 space-y-5">
+        <main id="main" className="play-main min-w-0 space-y-5">
           <p className="muted text-sm">
             {v.when} · {v.place}
           </p>
@@ -76,19 +78,13 @@ export function Play({ api }: { api: GameApi }) {
             <ol className="space-y-3">
               {v.options.map((o, i) => (
                 <li key={o.id}>
-                  <button
-                    type="button"
-                    onClick={() => api.choose(o.id)}
-                    disabled={Boolean(o.blocked)}
-                    aria-describedby={o.hint || o.blocked ? `hint-${o.id}` : undefined}
-                    className="btn btn-quiet w-full flex-col items-start bg-[var(--card)] py-3"
-                  >
-                    <span className="font-semibold">
+                  <button type="button" onClick={() => api.choose(o.id)} disabled={Boolean(o.blocked)} aria-describedby={o.hint || o.blocked ? `hint-${o.id}` : undefined} className="choice">
+                    <span className="choice-label">
                       <span className="muted mr-2 font-normal">{i + 1}.</span>
                       {o.label}
                     </span>
                     {o.hint || o.blocked ? (
-                      <span id={`hint-${o.id}`} className="muted mt-1 text-sm">
+                      <span id={`hint-${o.id}`} className="choice-hint">
                         {o.blocked ?? o.hint}
                       </span>
                     ) : null}

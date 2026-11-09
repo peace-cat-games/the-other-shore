@@ -6,7 +6,7 @@
  * The reception building, the church hall, the summer hotel inland and every
  * volunteer and host are fictional. Ramlösa, the radio statement, the move
  * inland, the emergency visa and the police form with its "Jude" box are from
- * docs/history/sweden-finland.md, Part A.
+ * docs/history/sweden.md, Part A.
  */
 import { at } from "../engine/calendar.ts";
 import type { Campaign, PlaceDef } from "../engine/types.ts";

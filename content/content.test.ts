@@ -140,7 +140,8 @@ test("the history, credits and invitation exist and link only to real Peace Cat 
   const cited = new Set(HISTORY.sections.flatMap((s) => s.sources));
   for (const id of cited) assert.ok(HISTORY.sources.some((x) => x.id === id), `uncited source ${id}`);
   for (const l of EXPLORE.links) assert.match(l.href, /^https:\/\/www\.peacecatgames\.com\/(games|after-dark)?$/);
-  assert.match(HISTORY.sections.map((s) => s.paragraphs.join(" ")).join(" "), /eight Jewish refugees/);
+  // Finland's history belongs to a future game; here it appears only in the author's own note.
+  assert.doesNotMatch(HISTORY.sections.map((s) => s.paragraphs.join(" ")).join(" "), /Finland|Finnish/);
 });
 
 test("Jewish characters never voice the author's Christian interpretation", () => {

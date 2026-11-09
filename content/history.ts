@@ -84,17 +84,15 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
     {
       title: "A record that was not flawless",
       paragraphs: [
-        "During the occupation Danish authorities expelled about twenty Jewish refugees to Germany.",
-        "Finland, which fought alongside Germany against the Soviet Union, did not hand over its Jewish citizens; Finnish Jews served in the Finnish army. But on 6 November 1942 Finland handed eight Jewish refugees to the Gestapo in Helsinki harbor. Seven of them died; one, Georg Kollmann, survived Auschwitz, having lost his wife and child there. In November 2000 the Finnish prime minister apologized to the Jewish community on behalf of the government.",
+        "During the occupation Danish authorities expelled about twenty Jewish refugees to Germany. Until late 1942 Sweden's policy toward Jewish refugees was restrictive; the deportation of Norway's Jews that November changed it.",
       ],
-      sources: ["folkedrab-persecution", "fenno-history", "fenno-war", "fenno-refugees"],
+      sources: ["folkedrab-persecution", "levande-historia"],
     },
     {
       title: "After the war: no collective punishment",
       paragraphs: [
         "Denmark did not expel its established German minority in South Jutland. About 3,500 of its members were interned and about 3,000 sentenced, mostly for service in German units. Many in the minority saw the internment and the trials as unjust; one Danish historian judges them reasonable for their time. Either way the response was judicial, individual and limited, while Germans were being summarily driven out of Poland, Czechoslovakia and Yugoslavia. In 1955 Denmark and West Germany set out the rights of the minorities on both sides of the border.",
         "This is a different matter from the roughly 250,000 German refugees who fled to Denmark in 1945. They were held in guarded camps, cut off from Danes, until they were sent back to Germany; the last left in February 1949.",
-        "Sweden and Finland faced different questions. Sweden handed over to the Soviet Union soldiers who had served in German forces; Finland interned German civilians under the armistice and handed German prisoners of war to the Soviet Union. None of the three countries kept every German, and the game does not claim they did.",
       ],
       sources: ["denmark-minority", "thaler", "sdu-kristensen", "lex-oksbol"],
     },
@@ -144,9 +142,6 @@ export const HISTORY: { intro: string[]; sections: HistorySection[]; sources: Hi
     { id: "folkedrab-persecution", title: "The Persecution of Danish Jews", publisher: "folkedrab.dk", url: "https://folkedrab.dk/temaer/theresienstadt/danish-jews-in-theresienstadt-english/historical-background/the-persecution-of-danish-jews" },
     { id: "folkedrab-theresienstadt", title: "In Theresienstadt", publisher: "folkedrab.dk", url: "https://folkedrab.dk/temaer/theresienstadt/danish-jews-in-theresienstadt-english/historical-background/in-theresienstadt" },
     { id: "folkedrab-whitebuses", title: "The White Busses", publisher: "folkedrab.dk", url: "https://folkedrab.dk/temaer/theresienstadt/danish-jews-in-theresienstadt-english/historical-background/the-white-busses" },
-    { id: "fenno-history", title: "History", publisher: "Fenno Judaica, Jewish Community of Helsinki", url: "https://fennojudaica.jchelsinki.fi/historia.en.html" },
-    { id: "fenno-war", title: "The Second World War", publisher: "Fenno Judaica, Jewish Community of Helsinki", url: "https://fennojudaica.jchelsinki.fi/toinen-maailmansota.en.html" },
-    { id: "fenno-refugees", title: "Refugees", publisher: "Fenno Judaica, Jewish Community of Helsinki", url: "https://fennojudaica.jchelsinki.fi/pakolaiset.en.html" },
     { id: "denmark-minority", title: "The German minority", publisher: "denmark.dk", url: "https://denmark.dk/people-and-culture/history/the-german-minority/" },
     { id: "thaler", title: "A Glass Half Full or Half Empty? The Post-war Treatment of the German Minority in Denmark (Peter Thaler)", publisher: "University of Southern Denmark", url: "https://portal.findresearcher.sdu.dk/en/publications/a-glass-half-full-or-half-empty-the-postwar-treatment-of-the-germ/" },
     { id: "sdu-kristensen", title: "Disputats om det tyske mindretal (Henrik Skov Kristensen)", publisher: "University of Southern Denmark", url: "https://www.sdu.dk/da/om-sdu/fakulteterne/humaniora/nyt_hum/disputats_om_tysk_mindretal" },

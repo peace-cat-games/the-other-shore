@@ -12,10 +12,10 @@ The three campaigns share one world. The dates below come from the research note
 | 29 September | The Swedish asylum offer is delivered | corridor.md §8 |
 | 1 October | A wire report: about 300 people landed at Landskrona and Helsingborg in small craft | corridor.md §8 |
 | Night of 1–2 October | The German action against the Jews of Denmark; most homes are empty | denmark.md |
-| Saturday 2 October, evening | Swedish radio announces that Sweden will receive Denmark's Jews | sweden-finland.md §1 |
-| Monday 4 October | A refugee camp opens at the Ramlösa spa in Helsingborg, with the Red Cross and the Lotta corps | sweden-finland.md §2a |
+| Saturday 2 October, evening | Swedish radio announces that Sweden will receive Denmark's Jews | sweden.md §1 |
+| Monday 4 October | A refugee camp opens at the Ramlösa spa in Helsingborg, with the Red Cross and the Lotta corps | sweden.md §2a |
 | 6 October | Gilleleje harbor closed by the Danish coast police; that night the Gestapo raid the church loft | corridor.md §8 |
-| About 7 October | Swedish welfare authorities decide to move Danish Jewish refugees away from the coast | sweden-finland.md §2c |
+| About 7 October | Swedish welfare authorities decide to move Danish Jewish refugees away from the coast | sweden.md §2c |
 | By 7 October | About 3,000 have reached Sweden | corridor.md §8 |
 | 4–10 October | The busiest week of crossings | corridor.md §8 |
 | Through October | In all about 7,000 Jews and several hundred non-Jewish relatives reach Sweden | corridor.md §8 |
