@@ -9,7 +9,6 @@ const literata = Literata({ subsets: ["latin", "latin-ext"], variable: "--font-l
 export const metadata: Metadata = {
   title: { default: "The Other Shore: October 1943 · Peace Cat Games", template: "%s · The Other Shore" },
   description: "A free historical rescue game about the escape of Denmark's Jews to Sweden in October 1943. Play a Jewish household, a Danish boat owner or a Swedish reception organizer.",
-  icons: { icon: "/brand/peace-cat-games-logo.png" },
   openGraph: { title: "The Other Shore: October 1943", description: "A free historical rescue game: ordinary people working together to bring their neighbors to safety.", siteName: "Peace Cat Games" },
 };
 

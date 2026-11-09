@@ -6,7 +6,7 @@ The following are **not** relicensed under COSL and keep their own terms:
 
 | What | Where | Terms |
 |---|---|---|
-| The Peace Cat Games name and logo | `public/brand/` | Used to identify the publisher. Not licensed for use as the name or mark of a derivative work. |
+| The Peace Cat Games name and logo | `app/icon.png` | Used to identify the publisher. Not licensed for use as the name or mark of a derivative work. |
 | Atkinson Hyperlegible typeface (Braille Institute) | Downloaded and self-hosted at build time by `next/font` | SIL Open Font License 1.1 |
 | Literata typeface (TypeTogether) | Downloaded and self-hosted at build time by `next/font` | SIL Open Font License 1.1 |
 | Works cited in `docs/history/` and on the in-game history page | Linked, with short quotations for citation | Remain their authors' and publishers'. The game's own text paraphrases them. |

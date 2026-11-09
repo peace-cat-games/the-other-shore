@@ -10,8 +10,20 @@ const SECURITY_HEADERS = [
   { key: "X-Frame-Options", value: "DENY" },
 ];
 
+/**
+ * The game is served at peacecatgames.com/the-other-shore: the site rewrites
+ * that path to this deployment, so every page and asset lives under the same
+ * base path here too.
+ */
+const BASE_PATH = "/the-other-shore";
+
 const nextConfig: NextConfig = {
+  basePath: BASE_PATH,
   poweredByHeader: false,
+  async redirects() {
+    // The deployment's own root sends visitors to the game.
+    return [{ source: "/", destination: BASE_PATH, basePath: false, permanent: false }];
+  },
   devIndicators: false,
   async headers() {
     return [{ source: "/(.*)", headers: SECURITY_HEADERS }];
