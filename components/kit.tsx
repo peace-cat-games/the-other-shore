@@ -1,5 +1,5 @@
 /** Small shared pieces of the interface. */
-import Link from "next/link";
+import { page } from "@/lib/paths";
 import type { ReactNode } from "react";
 
 export function Button({ children, onClick, kind = "primary", disabled, type = "button", describedBy }: { children: ReactNode; onClick?: () => void; kind?: "primary" | "quiet"; disabled?: boolean; type?: "button" | "submit"; describedBy?: string }) {
@@ -30,13 +30,13 @@ export function Footer() {
           Peace Cat Games
         </a>{" "}
         ·{" "}
-        <Link href="/history" className="underline">
+        <a href={page("/history")} className="underline">
           The history
-        </Link>{" "}
+        </a>{" "}
         ·{" "}
-        <Link href="/credits" className="underline">
+        <a href={page("/credits")} className="underline">
           Credits
-        </Link>
+        </a>
       </span>
     </footer>
   );

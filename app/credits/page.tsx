@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { page } from "@/lib/paths";
 
 import { HonorRoll } from "@/components/HonorRoll";
 import { Page } from "@/components/kit";
@@ -11,9 +11,9 @@ export default function Credits() {
   return (
     <Page>
       <p>
-        <Link href="/" className="underline">
+        <a href={page("/")} className="underline">
           Back to The Other Shore
-        </Link>
+        </a>
       </p>
       <h1 className="mt-4 text-3xl font-semibold sm:text-4xl">In honor</h1>
       <div className="mt-6">

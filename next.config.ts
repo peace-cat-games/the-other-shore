@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+import { BASE_PATH } from "./lib/paths.ts";
+
 /** Security headers for every page. The game loads no third-party scripts. */
 const SECURITY_HEADERS = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -15,7 +17,6 @@ const SECURITY_HEADERS = [
  * that path to this deployment, so every page and asset lives under the same
  * base path here too.
  */
-const BASE_PATH = "/the-other-shore";
 
 const nextConfig: NextConfig = {
   basePath: BASE_PATH,

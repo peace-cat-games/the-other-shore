@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { page } from "@/lib/paths";
 
 import { Page } from "@/components/kit";
 import { HISTORY } from "@/content/history";
@@ -11,9 +11,9 @@ export default function History() {
   return (
     <Page>
       <p>
-        <Link href="/" className="underline">
+        <a href={page("/")} className="underline">
           Back to The Other Shore
-        </Link>
+        </a>
       </p>
       <h1 className="mt-4 text-3xl font-semibold sm:text-4xl">The history</h1>
       <div className="story mt-4 font-serif text-lg">
