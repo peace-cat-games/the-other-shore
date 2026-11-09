@@ -4,7 +4,7 @@
  *
  * Fictional parameter: in standard mode only, with two or more ignored
  * warnings (r:risk-*), the Gestapo may be waiting when he comes home:
- * 25% with two, 50% with three or more. His passengers are already safe in
+ * 15% with two, 35% with three or more. His passengers are already safe in
  * Sweden. Helpers who were caught were handed to the Danish police; the
  * law allowed up to three months' prison, and many cases were dropped
  * (docs/history/denmark.md §5).
@@ -248,7 +248,7 @@ function board3(c: Ctx): void {
 function home3(c: Ctx): void {
   c.pass(5 * 60);
   const r = risk(c);
-  if (c.mode === "standard" && r >= 2 && c.roll("arrest", r >= 3 ? 0.5 : 0.25)) {
+  if (c.mode === "standard" && r >= 2 && c.roll("arrest", r >= 3 ? 0.35 : 0.15)) {
     c.move("anders", "helsingor", "held");
     c.say("When you tie up at Snekkersten there are two men in long coats on the jetty, and a car on the road. They know your name. Someone told.");
     c.log("Arrested by the Gestapo on the jetty at Snekkersten.");
